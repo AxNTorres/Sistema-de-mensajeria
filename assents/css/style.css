@@ -1,0 +1,225 @@
+
+/* ---------------------caja principal CSS */
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container_principal{
+    display: flex;
+    background-color:  #E8EBE4;
+}
+.chatbox_user{
+    display: flex;
+    background-color: #FFF;
+    flex-direction: column;
+    flex-basis: 375px;
+    margin-left: 0;
+    margin-right: 10rem;
+}
+/* ---------------------FIN CAJA PRINCIPAL CSS */
+
+
+/* ---------------------CAJA DE MARIA CSS */
+.chatbox_user_ejemplo{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: #FFFFFF1A;
+}
+.chatbox_user_ejemplo-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    background-color: #FFF;
+    border-top: 1px solid #BEC1BB;
+    border-bottom: 1px solid #BEC1BB;
+}
+.chatbox_user_ejemplo-newchat{
+    border-bottom: 1px solid #BEC1BB;
+    margin: 20px 0px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.button{
+    margin: 10px;
+    border-radius: 10%;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3) ;
+}
+.chatbox_user_ejemplo-items-foto{
+border-radius: 50%;
+background-image:url(../img/maria.jpg);
+height: 35px;
+width: 35px;
+background-size: cover;
+margin-left: 10px;
+}
+/* ---------------------CAJA DE MARIA parte interna CSS */
+.chatbox_user_ejemplo-items-nombre{
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+}
+.chatbox_user_ejemplo-items-nombre h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: large;
+}
+.chatbox_user_ejemplo-items-nombre h5{
+    font-size: small;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0;
+    margin-top: 0;   
+    font-family: sans-serif;
+    color:#98FB98;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.chatbox_user_ejemplo-newchat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+.chatbox_user_ejemplo-newchat button {
+    height: 2rem;
+    width: 120px;
+    background-color: #A491D2;
+    border: none;
+    color: #FFFFFF99;
+}
+/*------------------ FIN CAJA DE MARIA  CSS */
+
+
+
+/* ------------------CAJA DE usuarios CSS */
+.chatbox_user_items-container{
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    align-items: start;
+}
+.chatbox_user_items{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-content: center;
+    margin-bottom: 5px;
+    padding: 0;
+    border-bottom: 1px solid #BEC1BB;
+    /* tratando con las transiciones  */
+    transition: 0.8s ease; 
+    position: relative; 
+}
+    /* Queria lograr otra cosa, pero...  */
+.chatbox_user_items-icon{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 40%;
+    right: 100%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: flex-start;
+    gap:40px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+.chatbox_user_items-foto img{
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 2px;
+    width: 50px;
+    height: 50px;
+}
+.chatbox_user_items-nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1,2;
+}
+.chatbox_user_items-nombre h4,
+.chatbox_user_items-nombre h5 {
+    margin-left: 20px;
+    padding: 0;
+    display: block; 
+}
+
+.chatbox_user_items-nombre h4{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: large;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.chatbox_user_items-nombre h5{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: small;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}    
+/* ---------------Termino de usuarios CSS */
+
+
+/* ---------------CHAT BOX  CSS */
+.chatbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #E8EBE4;
+}
+.chatbox_titulos h2{
+font-family:"Open Sans", sans-serif;
+font-size: 45px;
+}
+.chatbox_titulos h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.chatbox img{
+
+}
+/* ------------TERMINO CHAT BOX  CSS */
+
+
+
+/* ------------HOVER----------- */
+
+
+.chatbox_user_items:hover {
+    transform: translateX(150px);
+}
+.chatbox_user_items:hover .chatbox_user_items-icon {
+    opacity: 1;
+    pointer-events: auto; 
+}
+.chatbox img:hover{
+    transform: scale(0.995);
+}
+.chatbox_user_ejemplo-newchat .button:hover{
+    transform: scale(0.995);
+}
